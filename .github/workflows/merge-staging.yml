@@ -1,4 +1,4 @@
-name: Merge master on staging
+name: Sync master and staging
 
 on:
   push:
@@ -6,12 +6,12 @@ on:
       - master
 
 jobs:
-  merge-master:
+  sync-master-and-staging:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
 
-      - name: Merge development -> staging
+      - name: Merge master -> staging
         uses: devmasx/merge-branch@v1.3.1
         with:
           type: now
