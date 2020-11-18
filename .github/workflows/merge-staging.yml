@@ -3,7 +3,7 @@ name: Merge master on staging
 on:
   push:
     branches:
-      - 'master'
+      - master
 
 jobs:
   merge-master:
